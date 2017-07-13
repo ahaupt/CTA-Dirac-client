@@ -3,6 +3,8 @@ From:centos:7
 
 %post
 
+yum -y install wget
+
 mkdir -p /opt/dirac
 cd /opt/dirac
 cat << EOF > /opt/dirac/defaults-CTA.cfg
