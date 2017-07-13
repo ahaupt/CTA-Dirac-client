@@ -27,6 +27,7 @@ EOF
 wget https://github.com/DIRACGrid/DIRAC/raw/master/Core/scripts/dirac-install.py
 python dirac-install.py -V CTA
 
+mkdir -p $DIRAC_ROOT/etc
 cat <<EOF > $DIRAC_ROOT/etc/dirac.cfg
 LocalInstallation
 {
