@@ -6,7 +6,7 @@ From:centos:7
 # general packages needed inside the container
 yum -y install less strace wget
 # packages Dirac depends on
-yum -y install boost-python
+yum -y install boost-python boost-system c-ares libtool-ltdl protobuf
 
 export DIRAC_ROOT=/opt/dirac
 
@@ -86,6 +86,7 @@ EOF
 
 chown -R root:root $DIRAC_ROOT
 
+# does not seem to work ...
 cp $DIRAC_ROOT/bashrc /environment
 
 #%runscript
