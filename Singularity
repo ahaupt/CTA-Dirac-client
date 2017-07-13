@@ -4,6 +4,7 @@ From:centos:7
 %post
 
 mkdir -p /opt/dirac
+cd /opt/dirac
 cat << EOF > /opt/dirac/defaults-CTA.cfg
 LocalInstallation
 {
