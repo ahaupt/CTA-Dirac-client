@@ -86,6 +86,8 @@ EOF
 
 chown -R root:root $DIRAC_ROOT
 
-%runscript
+cp $DIRAC_ROOT/bashrc /environment
 
-source /opt/dirac/bashrc
+#%runscript
+#
+#source /opt/dirac/bashrc
