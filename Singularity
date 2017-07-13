@@ -1,5 +1,5 @@
 bootstrap:docker
-From:centos7:latest
+From:centos:7
 
 %post
 
@@ -20,3 +20,4 @@ LocalInstallation
 }
 EOF
 wget https://github.com/DIRACGrid/DIRAC/raw/master/Core/scripts/dirac-install.py
+python dirac-install.py -V CTA
