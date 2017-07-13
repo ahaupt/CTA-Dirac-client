@@ -3,7 +3,10 @@ From:centos:7
 
 %post
 
-yum -y install wget strace
+# general packages needed inside the container
+yum -y install less strace wget
+# packages Dirac depends on
+yum -y install boost-python
 
 export DIRAC_ROOT=/opt/dirac
 
