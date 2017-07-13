@@ -6,7 +6,7 @@ From:centos:7
 # general packages needed inside the container
 yum -y install less strace wget
 # packages Dirac depends on
-yum -y install boost-python boost-system boost-thread c-ares libtool-ltdl protobuf
+yum -y install boost-program-options boost-python boost-system boost-thread c-ares libtool-ltdl protobuf
 
 export DIRAC_ROOT=/opt/dirac
 
