@@ -115,4 +115,6 @@ EOF
 
 chown -R root:root $DIRAC_ROOT
 
-#%runscript
+%runscript
+
+exec /bin/bash "$@"
