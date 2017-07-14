@@ -9,8 +9,8 @@ NAME		CTA-Dirac client
 %environment
 
 PATH=/opt/dirac/scripts:/opt/dirac/Linux_x86_64_glibc-2.17/bin
-LD_LIBRARY_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/mysql:/opt/dirac/Linux_x86_64_glibc-2.17/lib:
-PYTHONPATH=/opt/dirac
+#LD_LIBRARY_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/mysql:/opt/dirac/Linux_x86_64_glibc-2.17/lib:
+#PYTHONPATH=/opt/dirac
 PYTHONUNBUFFERED=yes
 PYTHONOPTIMIZE=x
 X509_VOMS_DIR=/opt/dirac/etc/grid-security/vomsdir
