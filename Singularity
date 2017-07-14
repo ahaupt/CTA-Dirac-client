@@ -1,6 +1,35 @@
 bootstrap:docker
 From:centos:7
 
+%labels
+
+MAINTAINER	Andreas Haupt <andreas.haupt@desy.de>
+NAME		CTA-Dirac client
+
+%environment
+
+PATH=/opt/dirac/scripts:/opt/dirac/Linux_x86_64_glibc-2.17/bin
+LD_LIBRARY_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/mysql:/opt/dirac/Linux_x86_64_glibc-2.17/lib:
+PYTHONPATH=/opt/dirac
+PYTHONUNBUFFERED=yes
+PYTHONOPTIMIZE=x
+X509_VOMS_DIR=/opt/dirac/etc/grid-security/vomsdir
+SSL_CERT_DIR=/opt/dirac/etc/grid-security/certificates
+REQUESTS_CA_BUNDLE=/opt/dirac/etc/grid-security/certificates
+DIRAC=/opt/dirac
+DIRACBIN=/opt/dirac/Linux_x86_64_glibc-2.17/bin
+DIRACSCRIPTS=/opt/dirac/scripts
+DIRACLIB=/opt/dirac/Linux_x86_64_glibc-2.17/lib
+DIRACPLAT=Linux_x86_64_glibc-2.17
+GFAL_CONFIG_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/etc/gfal2.d
+GFAL_PLUGIN_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/lib/gfal2-plugins
+GLOBUS_IO_IPV6=TRUE
+GLOBUS_FTP_CLIENT_IPV6=TRUE
+ARC_PLUGIN_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/arc
+TERMINFO=/opt/dirac/Linux_x86_64_glibc-2.17/share/terminfo:/usr/share/terminfo:/etc/terminfo
+RRD_DEFAULT_FONT=/opt/dirac/Linux_x86_64_glibc-2.17/share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
+
+
 %post
 
 # general packages needed inside the container
@@ -73,7 +102,7 @@ EOF
 # ~$ source bashrc
 # ~$ dirac-configure defaults-CTA.cfg
 
-mkdir -p $DIRAC_ROOT/etc/grid-security/vomses
+mkdir -p $DIRAC_ROOT/etc/grid-security/{vomses,certificates}
 cat <<EOF > $DIRAC_ROOT/etc/grid-security/vomses/vo.cta.in2p3.fr
 "vo.cta.in2p3.fr" "cclcgvomsli01.in2p3.fr" "15008" "/O=GRID-FR/C=FR/O=CNRS/OU=CC-IN2P3/CN=cclcgvomsli01.in2p3.fr" "vo.cta.in2p3.fr" "24"
 EOF
@@ -86,9 +115,4 @@ EOF
 
 chown -R root:root $DIRAC_ROOT
 
-# does not seem to work ...
-cp $DIRAC_ROOT/bashrc /environment
-
 #%runscript
-#
-#source /opt/dirac/bashrc
