@@ -8,11 +8,11 @@ NAME		CTA-Dirac client
 
 %environment
 
-PATH=/opt/dirac/scripts:/opt/dirac/Linux_x86_64_glibc-2.17/bin
+#PATH=/opt/dirac/scripts:/opt/dirac/Linux_x86_64_glibc-2.17/bin
 #LD_LIBRARY_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/mysql:/opt/dirac/Linux_x86_64_glibc-2.17/lib:
 #PYTHONPATH=/opt/dirac
-PYTHONUNBUFFERED=yes
-PYTHONOPTIMIZE=x
+#PYTHONUNBUFFERED=yes
+#PYTHONOPTIMIZE=x
 X509_VOMS_DIR=/opt/dirac/etc/grid-security/vomsdir
 SSL_CERT_DIR=/opt/dirac/etc/grid-security/certificates
 REQUESTS_CA_BUNDLE=/opt/dirac/etc/grid-security/certificates
@@ -26,8 +26,8 @@ GFAL_PLUGIN_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/lib/gfal2-plugins
 GLOBUS_IO_IPV6=TRUE
 GLOBUS_FTP_CLIENT_IPV6=TRUE
 ARC_PLUGIN_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/arc
-TERMINFO=/opt/dirac/Linux_x86_64_glibc-2.17/share/terminfo:/usr/share/terminfo:/etc/terminfo
-RRD_DEFAULT_FONT=/opt/dirac/Linux_x86_64_glibc-2.17/share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
+#TERMINFO=/opt/dirac/Linux_x86_64_glibc-2.17/share/terminfo:/usr/share/terminfo:/etc/terminfo
+#RRD_DEFAULT_FONT=/opt/dirac/Linux_x86_64_glibc-2.17/share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
 
 
 %post
