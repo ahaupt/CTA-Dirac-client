@@ -4,9 +4,9 @@ From:centos:7
 %post
 
 # general packages needed inside the container
-yum -y install less strace wget
+yum -y install epel-release less strace wget
 # packages Dirac depends on
-yum -y install boost-program-options boost-python boost-system boost-thread c-ares libtool-ltdl protobuf
+yum -y install boost-program-options boost-python boost-system boost-thread c-ares lfc-libs libtool-ltdl protobuf
 
 export DIRAC_ROOT=/opt/dirac
 
