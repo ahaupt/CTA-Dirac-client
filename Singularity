@@ -13,22 +13,23 @@ NAME		CTA-Dirac client
 #export PYTHONPATH=/opt/dirac
 #export PYTHONUNBUFFERED=yes
 #export PYTHONOPTIMIZE=x
-export X509_VOMS_DIR=/opt/dirac/etc/grid-security/vomsdir
-export SSL_CERT_DIR=/opt/dirac/etc/grid-security/certificates
-export REQUESTS_CA_BUNDLE=/opt/dirac/etc/grid-security/certificates
-export DIRAC=/opt/dirac
-export DIRACBIN=/opt/dirac/Linux_x86_64_glibc-2.17/bin
-export DIRACSCRIPTS=/opt/dirac/scripts
-export DIRACLIB=/opt/dirac/Linux_x86_64_glibc-2.17/lib
-export DIRACPLAT=Linux_x86_64_glibc-2.17
-export GFAL_CONFIG_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/etc/gfal2.d
-export GFAL_PLUGIN_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/lib/gfal2-plugins
-export GLOBUS_IO_IPV6=TRUE
-export GLOBUS_FTP_CLIENT_IPV6=TRUE
-export ARC_PLUGIN_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/arc
+#export X509_VOMS_DIR=/opt/dirac/etc/grid-security/vomsdir
+#export SSL_CERT_DIR=/opt/dirac/etc/grid-security/certificates
+#export REQUESTS_CA_BUNDLE=/opt/dirac/etc/grid-security/certificates
+#export DIRAC=/opt/dirac
+#export DIRACBIN=/opt/dirac/Linux_x86_64_glibc-2.17/bin
+#export DIRACSCRIPTS=/opt/dirac/scripts
+#export DIRACLIB=/opt/dirac/Linux_x86_64_glibc-2.17/lib
+#export DIRACPLAT=Linux_x86_64_glibc-2.17
+#export GFAL_CONFIG_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/etc/gfal2.d
+#export GFAL_PLUGIN_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/lib/gfal2-plugins
+#export GLOBUS_IO_IPV6=TRUE
+#export GLOBUS_FTP_CLIENT_IPV6=TRUE
+#export ARC_PLUGIN_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/arc
 #export TERMINFO=/opt/dirac/Linux_x86_64_glibc-2.17/share/terminfo:/usr/share/terminfo:/etc/terminfo
 #export RRD_DEFAULT_FONT=/opt/dirac/Linux_x86_64_glibc-2.17/share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
 
+source /opt/dirac/bashrc
 
 %post
 
