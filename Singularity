@@ -8,26 +8,26 @@ NAME		CTA-Dirac client
 
 %environment
 
-#PATH=/opt/dirac/scripts:/opt/dirac/Linux_x86_64_glibc-2.17/bin
-#LD_LIBRARY_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/mysql:/opt/dirac/Linux_x86_64_glibc-2.17/lib:
-#PYTHONPATH=/opt/dirac
-#PYTHONUNBUFFERED=yes
-#PYTHONOPTIMIZE=x
-X509_VOMS_DIR=/opt/dirac/etc/grid-security/vomsdir
-SSL_CERT_DIR=/opt/dirac/etc/grid-security/certificates
-REQUESTS_CA_BUNDLE=/opt/dirac/etc/grid-security/certificates
-DIRAC=/opt/dirac
-DIRACBIN=/opt/dirac/Linux_x86_64_glibc-2.17/bin
-DIRACSCRIPTS=/opt/dirac/scripts
-DIRACLIB=/opt/dirac/Linux_x86_64_glibc-2.17/lib
-DIRACPLAT=Linux_x86_64_glibc-2.17
-GFAL_CONFIG_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/etc/gfal2.d
-GFAL_PLUGIN_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/lib/gfal2-plugins
-GLOBUS_IO_IPV6=TRUE
-GLOBUS_FTP_CLIENT_IPV6=TRUE
-ARC_PLUGIN_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/arc
-#TERMINFO=/opt/dirac/Linux_x86_64_glibc-2.17/share/terminfo:/usr/share/terminfo:/etc/terminfo
-#RRD_DEFAULT_FONT=/opt/dirac/Linux_x86_64_glibc-2.17/share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
+#export PATH=/opt/dirac/scripts:/opt/dirac/Linux_x86_64_glibc-2.17/bin
+#export LD_LIBRARY_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/mysql:/opt/dirac/Linux_x86_64_glibc-2.17/lib:
+#export PYTHONPATH=/opt/dirac
+#export PYTHONUNBUFFERED=yes
+#export PYTHONOPTIMIZE=x
+export X509_VOMS_DIR=/opt/dirac/etc/grid-security/vomsdir
+export SSL_CERT_DIR=/opt/dirac/etc/grid-security/certificates
+export REQUESTS_CA_BUNDLE=/opt/dirac/etc/grid-security/certificates
+export DIRAC=/opt/dirac
+export DIRACBIN=/opt/dirac/Linux_x86_64_glibc-2.17/bin
+export DIRACSCRIPTS=/opt/dirac/scripts
+export DIRACLIB=/opt/dirac/Linux_x86_64_glibc-2.17/lib
+export DIRACPLAT=Linux_x86_64_glibc-2.17
+export GFAL_CONFIG_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/etc/gfal2.d
+export GFAL_PLUGIN_DIR=/opt/dirac/Linux_x86_64_glibc-2.17/lib/gfal2-plugins
+export GLOBUS_IO_IPV6=TRUE
+export GLOBUS_FTP_CLIENT_IPV6=TRUE
+export ARC_PLUGIN_PATH=/opt/dirac/Linux_x86_64_glibc-2.17/lib/arc
+#export TERMINFO=/opt/dirac/Linux_x86_64_glibc-2.17/share/terminfo:/usr/share/terminfo:/etc/terminfo
+#export RRD_DEFAULT_FONT=/opt/dirac/Linux_x86_64_glibc-2.17/share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
 
 
 %post
