@@ -44,7 +44,7 @@ cd $DIRAC_ROOT
 cat << EOF > $DIRAC_ROOT/defaults-CTA.cfg
 LocalInstallation
 {
-  ConfigurationServer = dips://ccdcta-server01.in2p3.fr:9135/Configuration/Server, dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server, dips://dcta-agents01.pic.es:9135/Configuration/Server, dips://dcta-servers01.pic.es:9135/Configuration/Server
+  ConfigurationServer = dips://ccdcta-server03.in2p3.fr:9135/Configuration/Server, dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server, dips://dcta-agents01.pic.es:9135/Configuration/Server, dips://dcta-servers01.pic.es:9135/Configuration/Server
   VirtualOrganization = vo.cta.in2p3.fr
   Setup = CTA
   PythonVersion = 27
@@ -63,7 +63,7 @@ mkdir -p $DIRAC_ROOT/etc
 cat <<EOF > $DIRAC_ROOT/etc/dirac.cfg
 LocalInstallation
 {
-  ConfigurationServer = dips://ccdcta-server01.in2p3.fr:9135/Configuration/Server
+  ConfigurationServer = dips://ccdcta-server03.in2p3.fr:9135/Configuration/Server
   ConfigurationServer += dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server
   ConfigurationServer += dips://dcta-agents01.pic.es:9135/Configuration/Server
   ConfigurationServer += dips://dcta-servers01.pic.es:9135/Configuration/Server
@@ -82,7 +82,7 @@ DIRAC
 {
   Configuration
   {
-    Servers = dips://ccdcta-server01.in2p3.fr:9135/Configuration/Server
+    Servers = dips://ccdcta-server03.in2p3.fr:9135/Configuration/Server
     Servers += dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server
     Servers += dips://dcta-agents01.pic.es:9135/Configuration/Server
     Servers += dips://dcta-servers01.pic.es:9135/Configuration/Server
