@@ -43,19 +43,16 @@ mkdir -p $DIRAC_ROOT/etc
 cat <<EOF > $DIRAC_ROOT/etc/dirac.cfg
 LocalInstallation
 {
-  ConfigurationServer = dips://ccdcta-server03.in2p3.fr:9135/Configuration/Server
-  ConfigurationServer += dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server
-  ConfigurationServer += dips://dcta-agents01.pic.es:9135/Configuration/Server
-  ConfigurationServer += dips://dcta-servers01.pic.es:9135/Configuration/Server
+  ConfigurationServer = dips://ccdcta-server03.in2p3.fr:9135/Configuration/Server, dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server, dips://dcta-agents01.pic.es:9135/Configuration/Server, dips://dcta-servers01.pic.es:9135/Configuration/Server, dips://cta-dirac.zeuthen.desy.de:9135/Configuration/Server
   VirtualOrganization = vo.cta.in2p3.fr
   Setup = CTA
   PythonVersion = 27
   Project = CTA
   InstallType = client
-  Extensions = COMDIRAC
+  Extensions = COMDIRAC, CTA
   SkipCAChecks = True
-  Release = v1r42p1
-  LcgVer = 2017-01-27
+  Release = v1r50p2
+  LcgVer = 2017-05-23
   SkipCADownload = True
 }
 DIRAC
@@ -66,10 +63,11 @@ DIRAC
     Servers += dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server
     Servers += dips://dcta-agents01.pic.es:9135/Configuration/Server
     Servers += dips://dcta-servers01.pic.es:9135/Configuration/Server
+    Servers += dips://cta-dirac.zeuthen.desy.de:9135/Configuration/Server
   }
   Setup = CTA
   VirtualOrganization = vo.cta.in2p3.fr
-  Extensions = COMDIRAC
+  Extensions = COMDIRAC, CTA
   Security
   {
     UseServerCertificate = no
