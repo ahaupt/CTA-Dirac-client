@@ -12,12 +12,16 @@ source /opt/dirac/bashrc
 
 %post
 
+export DIRAC_ROOT=/opt/dirac
+
+_PYTHON_VERSION=27
+_RELEASE=v1r51p1
+_LCGVER=2017-05-23
+
 # general packages needed inside the container
 yum -y install epel-release less strace wget
 # packages Dirac depends on
 yum -y install boost-program-options boost-python boost-system boost-thread c-ares lfc-libs libtool-ltdl protobuf
-
-export DIRAC_ROOT=/opt/dirac
 
 mkdir -p $DIRAC_ROOT
 cd $DIRAC_ROOT
@@ -27,12 +31,12 @@ LocalInstallation
   ConfigurationServer = dips://ccdcta-server03.in2p3.fr:9135/Configuration/Server, dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server, dips://dcta-agents01.pic.es:9135/Configuration/Server, dips://dcta-servers01.pic.es:9135/Configuration/Server
   VirtualOrganization = vo.cta.in2p3.fr
   Setup = CTA
-  PythonVersion = 27
+  PythonVersion = ${_PYTHON_VERSION}
   Project = CTA
   InstallType = client
   SkipCAChecks = True
-  Release = v1r51p1
-  LcgVer = 2017-05-23
+  Release = ${_RELEASE}
+  LcgVer = ${_LCGVER}
   SkipCADownload = True
 }
 EOF
@@ -46,13 +50,13 @@ LocalInstallation
   ConfigurationServer = dips://ccdcta-server03.in2p3.fr:9135/Configuration/Server, dips://ccdcta-server02.in2p3.fr:9135/Configuration/Server, dips://dcta-agents01.pic.es:9135/Configuration/Server, dips://dcta-servers01.pic.es:9135/Configuration/Server, dips://cta-dirac.zeuthen.desy.de:9135/Configuration/Server
   VirtualOrganization = vo.cta.in2p3.fr
   Setup = CTA
-  PythonVersion = 27
+  PythonVersion = ${_PYTHON_VERSION}
   Project = CTA
   InstallType = client
   Extensions = COMDIRAC, CTA
+  Release = ${_RELEASE}
+  LcgVer = ${_LCGVER}
   SkipCAChecks = True
-  Release = v1r51p1
-  LcgVer = 2017-05-23
   SkipCADownload = True
 }
 DIRAC
