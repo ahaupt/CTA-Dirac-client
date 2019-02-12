@@ -88,7 +88,7 @@ EOF
 mkdir -p $DIRAC_ROOT/etc/grid-security/vomsdir/vo.cta.in2p3.fr
 cat <<EOF > $DIRAC_ROOT/etc/grid-security/vomsdir/vo.cta.in2p3.fr/cclcgvomsli01.in2p3.fr.lsc
 /O=GRID-FR/C=FR/O=CNRS/OU=CC-IN2P3/CN=cclcgvomsli01.in2p3.fr
-/C=FR/O=CNRS/CN=GRID2-FR
+/C=FR/O=MENESR/OU=GRID-FR/CN=AC GRID-FR Services
 EOF
 
 chown -R root:root $DIRAC_ROOT
