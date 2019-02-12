@@ -31,8 +31,8 @@ LocalInstallation
   Project = CTA
   InstallType = client
   SkipCAChecks = True
-  Release = v1r42p1
-  LcgVer = 2017-01-27
+  Release = v1r51p1
+  LcgVer = 2017-05-23
   SkipCADownload = True
 }
 EOF
@@ -51,7 +51,7 @@ LocalInstallation
   InstallType = client
   Extensions = COMDIRAC, CTA
   SkipCAChecks = True
-  Release = v1r50p2
+  Release = v1r51p1
   LcgVer = 2017-05-23
   SkipCADownload = True
 }
