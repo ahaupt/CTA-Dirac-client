@@ -9,7 +9,6 @@ NAME		CTA-Dirac client
 %environment
 
 source /opt/dirac/bashrc
-export PS1='\[\033[1;32m\][CTA-Dirac-client] \[\033[1;34m\]\w \$\[\033[00m\] '
 
 %post
 
