@@ -15,8 +15,8 @@ source /opt/dirac/bashrc
 export DIRAC_ROOT=/opt/dirac
 
 _PYTHON_VERSION=27
-_RELEASE=v1r51p1
-_LCGVER=2017-05-23
+_RELEASE=v1r53p6
+_LCGVER=v14r1
 
 # general packages needed inside the container
 yum -y install epel-release less strace wget
