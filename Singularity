@@ -92,6 +92,8 @@ cat <<EOF > $DIRAC_ROOT/etc/grid-security/vomsdir/vo.cta.in2p3.fr/cclcgvomsli01.
 /C=FR/O=MENESR/OU=GRID-FR/CN=AC GRID-FR Services
 EOF
 
+echo "export VOMS_USERCONF=$DIRAC_ROOT/etc/grid-security/vomses" >> $DIRAC_ROOT/bashrc
+
 chown -R root:root $DIRAC_ROOT
 
 %runscript
