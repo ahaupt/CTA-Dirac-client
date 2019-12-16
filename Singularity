@@ -15,8 +15,7 @@ source /opt/dirac/bashrc
 export DIRAC_ROOT=/opt/dirac
 
 _PYTHON_VERSION=27
-_RELEASE=v1r51p1
-_LCGVER=2017-05-23
+_RELEASE=v1r55
 
 # general packages needed inside the container
 yum -y install epel-release less strace wget
@@ -36,7 +35,6 @@ LocalInstallation
   InstallType = client
   SkipCAChecks = True
   Release = ${_RELEASE}
-  LcgVer = ${_LCGVER}
   SkipCADownload = True
 }
 EOF
@@ -55,7 +53,6 @@ LocalInstallation
   InstallType = client
   Extensions = COMDIRAC, CTA
   Release = ${_RELEASE}
-  LcgVer = ${_LCGVER}
   SkipCAChecks = True
   SkipCADownload = True
 }
